@@ -1,0 +1,92 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  /* Estilo del contenedor de la página de login */
+  .login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  /* Estilo del contenedor del login */
+  .login-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .login-container h2 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  /* Estilos de los elementos del formulario */
+  .login-form .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  .login-form label {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  /* Botón de inicio de sesión */
+  .login-button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 480px) {
+    .login-container {
+      padding: 1.5rem;
+    }
+  
+    .login-form input, .login-button {
+      font-size: 0.9rem;
+      padding: 0.6rem;
+    }
+  
+    .login-form .form-group {
+      margin-bottom: 1rem;
+    }
+  }
+  
