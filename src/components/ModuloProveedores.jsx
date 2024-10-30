@@ -10,6 +10,7 @@ function ModuloProveedores() {
     direccion: "",
   });
 
+  // Cargar la lista de proveedores desde la API al montar el componente
   useEffect(() => {
     fetch("https://almacenes-p9m7.onrender.com/api/proveedores")
       .then((response) => response.json())
@@ -17,6 +18,7 @@ function ModuloProveedores() {
       .catch((error) => console.error("Error al cargar proveedores:", error));
   }, []);
 
+  // Actualizar el estado con los valores de los inputs
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setNuevoProveedor((prev) => ({
@@ -25,6 +27,7 @@ function ModuloProveedores() {
     }));
   };
 
+  // Función para agregar un nuevo proveedor
   const handleAddProveedor = () => {
     if (!nuevoProveedor.nombre_proveedor || !nuevoProveedor.email) {
       console.error("Todos los campos obligatorios deben completarse");
@@ -45,6 +48,7 @@ function ModuloProveedores() {
         return response.json();
       })
       .then((data) => {
+        // Actualizar la lista de proveedores y limpiar el formulario
         setProveedores([...proveedores, data]);
         setNuevoProveedor({
           nombre_proveedor: "",
