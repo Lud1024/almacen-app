@@ -11,8 +11,8 @@ function LoginForm() {
     event.preventDefault();
 
     try {
-      //const response = await fetch("https://almacenes-p9m7.onrender.com/api/usuarios/auth", {
-        const response = await fetch("http://localhost:3000/api/usuarios/auth", {
+      const response = await fetch("https://almacenes-p9m7.onrender.com/api/usuarios/auth", {    
+   //const response = await fetch("http://localhost:3000/api/usuarios/auth", {
 
         method: "POST",
         headers: {

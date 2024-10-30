@@ -6,17 +6,17 @@ function Navbar({ userName, onLogout }) {
 
   return (
     <nav className="navbar">
-      <div className="navbar-brand">Sistema de Gestión</div>
+      <div className="navbar-brand" onClick={() => navigate("/home")}>Sistema de Gestión</div>
       <ul className="navbar-menu">
-        <li>Módulo de Gestión de Productos</li>
-        <li>Módulo de Gestión de Almacenes</li>
-        <li>Módulo de Control de Inventario</li>
-        <li>Módulo de Transacciones</li>
-        <li>Módulo de Órdenes de Reabastecimiento</li>
-        <li>Módulo de Notificaciones y Alertas</li>
+        <li onClick={() => navigate("/productos")}>Gestión de Productos</li>
+        <li onClick={() => navigate("/almacenes")}>Gestión de Almacenes</li>
+        <li onClick={() => navigate("/proveedores")}>Provedores</li>
+        <li onClick={() => navigate("/inventario")}>Control de Inventario</li>
+        <li onClick={() => navigate("/ordenes")}>Órdenes de Reabastecimiento</li>
+        <li onClick={() => navigate("/alertas")}>Notificaciones y Alertas</li>
+        <li onClick={() => navigate("/transacciones")}>Transacciones</li>
       </ul>
       <div className="navbar-user">
-        <span>Hola, {userName}</span>
         <button onClick={onLogout} className="logout-button">Salir</button>
       </div>
     </nav>

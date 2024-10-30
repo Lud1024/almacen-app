@@ -1,0 +1,85 @@
+.productos-container {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+  }
+  
+  .productos-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .productos-form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: 1fr; /* Una sola columna por defecto */
+  }
+  
+  /* Cambia a dos columnas en pantallas grandes */
+  @media (min-width: 768px) {
+    .productos-form {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .productos-form label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.2rem;
+  }
+  
+  .productos-form input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .productos-form input:focus {
+    border-color: #4285f4;
+    outline: none;
+  }
+  
+  .productos-button {
+    grid-column: span 2; /* El botón ocupará ambas columnas */
+    padding: 0.8rem;
+    background-color: #4285f4;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .productos-button:hover {
+    background-color: #357ae8;
+  }
+  
+  .mensaje-exito {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
